@@ -1,0 +1,30 @@
+<h1>Play#game</h1>
+
+<p>******** Welcome to the longest word-game! ********</p>
+<br>
+<p>"Here is your grid:"</p>
+<br>
+
+
+
+<%=  @grid.join(" ")%>
+
+<br>
+<p>*****************************************************</p>
+<br>
+<p>What's your best shot?</p>
+<br>
+
+<form action=score>
+  <label for="answer">Put your guess here</label>
+  <input type="hidden" name="start_time" value="<%= (Time.now).to_i %>">
+  <input type="hidden" name="grid_save" value="<%= @grid.join %>">
+  <input type="text" id="answer" name="query" placeholder="best guess?">
+  <input type="submit" value="Go on!">
+</form>
+
+<!-- start_time = Time.now
+attempt = gets.chomp
+end_time = Time.now -->
+
+
